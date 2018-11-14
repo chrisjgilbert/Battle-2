@@ -1,6 +1,9 @@
 feature 'on the home page' do
-  scenario 'it displays text' do
+  scenario 'players enter names' do
     visit '/'
-    expect(page).to have_content 'Testing infrastructure working!'
+    fill_in :player_1_name, with: "Chris"
+    fill_in :player_2_name, with: "Asad"
+    click_button 'submit'
+    expect(page).to have_content 'Chris vs. Asad'
   end
 end
