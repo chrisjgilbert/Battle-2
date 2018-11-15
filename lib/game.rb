@@ -16,4 +16,8 @@ class Game
     @players.first
   end
 
+  def turn
+    @players[0], @players[1] = @players[1], @players[0]
+  end
+
 end
