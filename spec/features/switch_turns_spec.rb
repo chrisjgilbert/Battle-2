@@ -1,4 +1,10 @@
 feature 'players switch turns' do
+
+  scenario 'it displays which players turn it is' do
+    sign_in_and_play
+    expect(page).to have_content "Player's turn: Chris"
+  end
+
   scenario 'player 1 takes turn then player 2' do
     sign_in_and_play
     click_button 'Attack'

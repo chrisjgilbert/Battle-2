@@ -1,6 +1,6 @@
 class Player
 
-  attr_reader :name, :hit_points
+  attr_reader :name, :hit_points, :turn_status
 
   DEFAULT_HP = 60
 

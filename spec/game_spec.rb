@@ -18,10 +18,22 @@ describe Game do
     end
   end
 
+  describe 'players' do
+    it 'contains the players' do
+      expect(game.players).to eq [chris, asad]
+    end
+  end
+
   describe '#attack' do
     it 'lets a player attack another' do
       expect(chris).to receive(:receive_damage)
       game.attack(chris)
+    end
+  end
+
+  describe '#current_player' do
+    it 'selecs the current player' do
+      expect(game.current_player).to eq chris
     end
   end
 
