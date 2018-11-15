@@ -6,11 +6,13 @@ describe Game do
   let(:chris)    { double(:chris) }
   let(:asad)     { double(:asad) }
 
-  describe '#initialize' do
+  describe '#player 1' do
     it 'takes player 1 as an argument' do
       expect(game.player_1).to eq chris
     end
+  end
 
+  describe '#player 2' do
     it 'takes player 2 as an argument' do
       expect(game.player_2).to eq asad
     end
