@@ -3,8 +3,8 @@ require 'game'
 describe Game do
 
   subject(:game) { described_class.new(chris, asad) }
-  let(:chris)    { double(:chris, hit_points: 60) }
-  let(:asad)     { double(:asad, hit_points: 60) }
+  let(:chris)    { double(:chris) }
+  let(:asad)     { double(:asad) }
 
   describe '#initialize' do
     it 'takes player 1 as an argument' do
