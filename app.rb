@@ -26,7 +26,13 @@ class Battle < Sinatra::Base
     @game = $game
     @game.attack(@game.waiting_player)
     @game.turn
+    redirect '/winner' if @game.winner != nil
     erb :attack
+  end
+
+  get '/winner' do
+    @game = $game
+    erb :winner
   end
 
   run! if app_file == $0
