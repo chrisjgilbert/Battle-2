@@ -1,6 +1,6 @@
-<%= @game.current_player.name %> attacked <%= @game.player_2.name %>!
+<%= @game.current_player.name %> attacked <%= @game.waiting_player.name %>!
 <br>
-<%= @game.player_2.name %>'s HP: <%=@game.player_2.hit_points %>
+<%= @game.waiting_player.name %>'s HP: <%=@game.waiting_player.hit_points %>
 <br>
 <form action="/play" method="get">
   <input type="submit" name="" value="Continue">
