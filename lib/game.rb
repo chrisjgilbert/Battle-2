@@ -13,15 +13,20 @@ class Game
   end
 
   def current_player
-    @players.first
+    players.first
   end
 
   def waiting_player
-    @players.last
+    players.last
   end
 
   def turn
-    @players[0], @players[1] = @players[1], @players[0]
+    players[0], players[1] = players[1], players[0]
+  end
+
+  def winner
+    return player_1 if player_2.hit_points == 0
+    return player_2 if player_1.hit_points == 0
   end
 
 end

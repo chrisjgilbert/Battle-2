@@ -50,4 +50,13 @@ describe Game do
     end
   end
 
+  describe '#winner' do
+    it 'returns the winner if a player has won' do
+      chris = double(:chris, hit_points: 10)
+      asad = double(:asad, hit_points: 0)
+      game = Game.new(chris, asad)
+      expect(game.winner).to eq chris
+    end
+  end
+
 end

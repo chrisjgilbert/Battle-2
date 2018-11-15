@@ -17,7 +17,7 @@ feature 'hit points' do
     expect(page).to have_content "Chris's HP: 50"
   end
 
-  scenario 'player wins when opponent reaches 0 HP' do
+  xscenario 'player wins when opponent reaches 0 HP' do
     sign_in_and_play
     click_button 'Attack'
     click_button 'Continue'
