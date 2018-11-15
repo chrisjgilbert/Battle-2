@@ -37,6 +37,12 @@ describe Game do
     end
   end
 
+  describe '#waiting_player' do
+    it 'selects the non current_player' do
+      expect(game.waiting_player).to eq asad
+    end
+  end
+
   describe '#turn' do
     it 'switches the players turns' do
       game.turn
