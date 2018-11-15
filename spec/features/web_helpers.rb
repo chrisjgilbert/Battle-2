@@ -5,7 +5,7 @@ def sign_in_and_play
   click_button 'Submit'
 end
 
-def attack
+def attack_and_continue
   click_button 'Attack'
   click_button 'Continue'
 end
